@@ -12,6 +12,6 @@
 </style>
 </head>
 <body>
-스프링 프레임워크 특강부터 기초 마스터!
+<a href="/login.do">로그인</a>
 </body>
 </html>

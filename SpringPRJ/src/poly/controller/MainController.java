@@ -17,4 +17,10 @@ public class MainController {
 		return "/index";
 	}
 			
+	@RequestMapping(value="login")
+	public String Login() {
+		log.info(this.getClass());
+		
+		return "/loginform";
+	}
 }
