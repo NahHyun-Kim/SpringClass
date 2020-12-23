@@ -23,4 +23,11 @@ public class MainController {
 		
 		return "/loginform";
 	}
+	
+	@RequestMapping(value="userReg")
+	public String UserReg() {
+		log.info(this.getClass());
+		
+		return "/userRegform";
+	}
 }

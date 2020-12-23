@@ -13,5 +13,6 @@
 </head>
 <body>
 <a href="/login.do">로그인</a>
+<a href="/userReg.do">회원가입</a>
 </body>
 </html>
