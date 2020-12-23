@@ -26,7 +26,14 @@
 
 	<dependencies>
 
+		<!-- 자바 메일 발송 라이브러리 -->
 		<!-- logging -->
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4</version>
+		</dependency>
+		
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
