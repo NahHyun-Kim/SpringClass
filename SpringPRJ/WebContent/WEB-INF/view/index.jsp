@@ -12,7 +12,7 @@
 </style>
 </head>
 <body>
-<a href="/login.do">로그인</a>
-<a href="/userReg.do">회원가입</a>
+<a href="/user/loginForm.do">로그인</a>
+<a href="/user/userRegForm.do">회원가입</a>
 </body>
 </html>
