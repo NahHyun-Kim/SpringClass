@@ -127,6 +127,13 @@
 			<artifactId>commons-dbcp</artifactId>
 			<version>1.4</version>
 		</dependency>
+		
+		<!-- 나현 추가 디펜던시(beanexception 오류 캐치 -->
+		<dependency>
+   		<groupId>commons-configuration</groupId>
+   		<artifactId>commons-configuration</artifactId>
+  		 <version>1.9</version>
+		</dependency>
 
 		<!-- Oracle -->
 		<dependency>
