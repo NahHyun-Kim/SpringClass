@@ -26,5 +26,7 @@ alert("<%=msg%>");
 </head>
 <body>
 <%=CmmUtil.nvl(pDTO.getUser_name()) %>님의 회원가입을 축하드립니다.
+<br />
+<input type="button" onclick="location.href='/user/loginForm.do'" value="로그인">
 </body>
 </html>

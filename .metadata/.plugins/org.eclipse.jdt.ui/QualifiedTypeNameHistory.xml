@@ -13,7 +13,10 @@
     <fullyQualifiedTypeName name="javax.crypto.Cipher"/>
     <fullyQualifiedTypeName name="org.apache.tomcat.util.codec.binary.Base64"/>
     <fullyQualifiedTypeName name="org.apache.log4j.Logger"/>
-    <fullyQualifiedTypeName name="poly.util.CmmUtil"/>
     <fullyQualifiedTypeName name="poly.dto.MailDTO"/>
     <fullyQualifiedTypeName name="poly.util.EncryptUtil"/>
+    <fullyQualifiedTypeName name="poly.util.CmmUtil"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+    <fullyQualifiedTypeName name="poly.util.DateUtil"/>
 </qualifiedTypeNameHistroy>
