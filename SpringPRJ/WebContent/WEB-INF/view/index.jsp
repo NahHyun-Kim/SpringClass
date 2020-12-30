@@ -15,5 +15,6 @@
 <a href="/user/loginForm.do">로그인</a>
 <a href="/user/userRegForm.do">회원가입</a>
 <a href="/movie/getMovieInfoFromWEB.do">영화 크롤링하기</a>
+<a href="/ocr/imageFileUpload.do">이미지 인식하기</a>
 </body>
 </html>
