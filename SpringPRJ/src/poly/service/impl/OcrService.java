@@ -13,22 +13,26 @@ import poly.util.CmmUtil;
 
 @Service("OcrService")
 public class OcrService implements IOcrService {
-
+	
+	
 	//로그 파일 생성 및 로그 출력을 위한 log4j 프레임워크의 자바 객체
 	private Logger log = Logger.getLogger(this.getClass());
+
+
 	
-	/**
+	/* 
 	 * 이미지 파일로부터 문자 읽어 오기
-	 * @param pDTO 이미지 파일 정보
-	 * @return pDTO 이미지로부터 읽은 문자열
-	 * */
-	@Override
+	 * 
+	 *  @param pDTO 이미지 파일 정보
+	 *  @return pDTO 이미지로부터 읽은 문자열
+	 *  */
+	
+		@Override
 	public OcrDTO getReadforImageText(OcrDTO pDTO) throws Exception {
+
+		log.info(this.getClass().getName() + ".getReadforImageText start!!");
 		
-		log.info(this.getClass().getName() + ".getReadforImageText start!");
-		
-		File imageFile = new File(CmmUtil.nvl(pDTO.getFilePath()) + "/" + CmmUtil.nvl(pDTO.getFileName()));
-		
+		File imageFile = new File(CmmUtil.nvl(pDTO.getFilePath()) + "//" + CmmUtil.nvl(pDTO.getFileName()));
 		//OCR 기술 사용을 위한 Tesseract 플랫폼 객체 생성
 		ITesseract instance = new Tesseract();
 		
@@ -48,9 +52,9 @@ public class OcrService implements IOcrService {
 		
 		log.info("result : " + result);
 		
-		log.info(this.getClass().getName() + ".getReadforImageText End!");
-		
+		log.info(this.getClass().getName() + ".getReadforImageText end!!");
 		return pDTO;
 	}
+
 
 }

@@ -8,10 +8,10 @@
 </head>
 <body>
 	<h2>이미지 인식</h2>
-	<hr />
+	<hr/>
 	<form name="form1" method="post" enctype="multipart/form-data" action="/ocr/getReadforImageText.do">
 		<br />
-		이미지 파일 업로드 : <input type="file" name="fileUpload" />
+		이미지 파일 업로드 : <input type="file" name="fileUpload"/>
 		<br />
 		<br />
 		<input type="submit" value="전송" />

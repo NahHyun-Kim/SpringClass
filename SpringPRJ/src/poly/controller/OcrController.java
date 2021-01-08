@@ -19,46 +19,36 @@ import poly.util.CmmUtil;
 import poly.util.DateUtil;
 import poly.util.FileUtil;
 
-/*
- * Controller 선언해야만 Spring 프레임워크에서 Controller인지 인식 가능
- * 자바 서블릿 역할 수행
- * */
-@Controller("OcrController")
+
+@Controller
 public class OcrController {
+
 	private Logger log = Logger.getLogger(this.getClass());
 	
-	/*
-	 * 비즈니스 로직(중요 로직을 수행하기 위해 사용되는 서비스를 메모리에 적재(싱글톤패턴 적용됨)
-	 * */
-	@Resource(name="OcrService")
+	//비즈니스 로직(중요 로직을 수행하기 위해 사용되는 서비스를 메모리에 적재(싱글톤패턴 적용됨)
+	
+	@Resource(name = "OcrService")
 	private IOcrService ocrService;
 	
 	//업로드되는 파일이 저장되는 기본 폴더 설정(자바에서 경로는 /로 표현함)
-	final private String FILE_UPLOAD_SAVE_PATH = "c:/upload"; //C:\\upload 폴더에 저장
+	final private String FILE_UPLOAD_SAVE_PATH = "C:/upload"; //C:\\upload 폴더에 저장
 	
-	/**
-	 * 이미지 인식을 위한 파일 업로드 화면 호출
-	 * */
-	@RequestMapping(value="ocr/imageFileUpload")
-	public String imageFileUpload() {
-		log.info(this.getClass().getName() + ".imageFile Upload!");
+	//이미지 인식을 위한 파일업로드 화면 호출
+	@RequestMapping(value = "ocr/imageFileUpload")
+	public String Index() {
+		log.info(this.getClass().getName() + ".imageFileUpload!!");
 		
 		return "/ocr/ImageFileUpload";
-	}
-	
-	/**
-	 * 파일업로드 및 이미지 인식
-	 * */
+	}	
+	//파일업로드 및 이미지 인식
 	@RequestMapping(value = "ocr/getReadforImageText")
-	public String getReadforImageText(HttpServletRequest request, HttpServletResponse response, ModelMap model,
-			@RequestParam(value="fileUpload") MultipartFile mf) throws Exception {
-		
-		log.info(this.getClass().getName() + ".getReadforImageText start!");
+	public String getReadforImageText(HttpServletRequest request, HttpServletResponse response, ModelMap model, @RequestParam(value="fileUpload") MultipartFile mf) throws Exception {
+		log.info(this.getClass().getName() + ".getReadforImageText start!!");
 		
 		//OCR 실행 결과
 		String res = "";
 		
-		//업로드 하는 실제 파일명
+		//업로드하는 실제 파일명
 		//다운로드 기능 구현 시, 임의로 정의된 파일명을 원래대로 만들어주기 위한 목적
 		String originalFileName = mf.getOriginalFilename();
 		
@@ -70,7 +60,7 @@ public class OcrController {
 			
 			//웹서버에 저장되는 파일 이름
 			//업로드하는 파일 이름에 한글, 특수 문자들이 저장될 수 있기 때문에 강제로 영어와 숫자로 구성된 파일명으로 변경해서 저장한다.
-			//리눅스와 유닉스 등 운영체제는 다국어 지원에 취약하기 때문이다.
+			//리눅스나 유닉스 등 운영체제는 다국어 지원에 취약하기 때문이다.
 			String saveFileName = DateUtil.getDateTime("24hhmmss") + "." + ext;
 			
 			//웹서버에 업로드한 파일 저장하는 물리적 경로
@@ -102,16 +92,18 @@ public class OcrController {
 			
 			rDTO = null;
 			pDTO = null;
-		}else {
+			
+		} else {
 			res = "이미지 파일이 아니라서 인식이 불가능합니다.";
 		}
 		
-		//크롤링한 결과를 넣어주기
+		//크롤링 결과를 넣어주기
 		model.addAttribute("res", res);
 		
-		log.info(this.getClass().getName() + ".getReadforImageText End!");
+		log.info(this.getClass().getName() + ".getReadforImageText end!!");
+		
 		
 		return "/ocr/TextFromImage";
-	}
 	
+}
 }

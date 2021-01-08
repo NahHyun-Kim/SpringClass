@@ -10,7 +10,6 @@ import poly.persistance.mapper.IUserInfoMapper;
 import poly.service.IMailService;
 import poly.service.IUserInfoService;
 import poly.util.CmmUtil;
-import poly.util.DateUtil;
 import poly.util.EncryptUtil;
 
 @Service("UserInfoService")
