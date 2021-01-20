@@ -6,6 +6,7 @@ public class NlpDTO {
 	private String word; //단어
 	private String word_root; //단어 어근
 	private String polarity; //단어
+	
 	public String getWord() {
 		return word;
 	}

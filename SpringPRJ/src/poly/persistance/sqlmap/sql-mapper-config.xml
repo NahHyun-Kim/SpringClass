@@ -7,7 +7,7 @@
 		<typeAlias type="poly.dto.NoticeDTO" alias="NoticeDTO"/>
 		<typeAlias type="poly.dto.UserInfoDTO" alias="UserInfoDTO"/>
 		<typeAlias type="poly.dto.MovieDTO" alias="MovieDTO"/>
-		<typeAlias type="poly.dto.MovieDTO" alias="OcrDTO"/>
-		<typeAlias type="poly.dto.MovieDTO" alias="NlpDTO"/>
+		<typeAlias type="poly.dto.OcrDTO" alias="OcrDTO"/>
+		<typeAlias type="poly.dto.NlpDTO" alias="NlpDTO"/>
     </typeAliases>
 </configuration>
