@@ -30,6 +30,7 @@
     <fullyQualifiedTypeName name="poly.util.StringUtil"/>
     <fullyQualifiedTypeName name="java.util.Iterator"/>
     <fullyQualifiedTypeName name="org.apache.log4j.Logger"/>
-    <fullyQualifiedTypeName name="poly.util.CmmUtil"/>
     <fullyQualifiedTypeName name="poly.dto.NlpDTO"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+    <fullyQualifiedTypeName name="poly.util.CmmUtil"/>
 </qualifiedTypeNameHistroy>
