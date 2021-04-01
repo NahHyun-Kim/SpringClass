@@ -50,7 +50,7 @@ public class MovieService implements IMovieService {
 		// <div class="sect-movie-chart"> 이 태그 내에서 있는 HTML 소스만 element에 저장됨
 		Elements element = doc.select("div.sect-movie-chart");
 		
-		//Iterator를 사용하여 영화 순위 정보를 가졍괴
+		//Iterator를 사용하여 영화 순위 정보를 가져오기
 		//영화 순위는 기본적으로 1개 이상의 영화가 존재하기 때문에 태그의 반복이 존재할 수밖에 없음
 		Iterator<Element> movie_rank = element.select("strong.rank").iterator(); //영화 순위
 		Iterator<Element> movie_name = element.select("strong.title").iterator(); //영화 이름
